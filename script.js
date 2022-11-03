@@ -52,10 +52,17 @@ xhr.onload=function() {
 // output for above code..
 // 7759438109
 
-         let currencyData = data.filter((elem) => {
-            return elem.currencies.USD['name'];
-         })
-         console.log(currencyData);
+//          let currencyData = data.filter((elem) => {
+//             return elem.currencies[0].code==="USD";
+//          })
+// 	 console.log(currencyData);
+	    
+	 for(i=0;i<data.length;i++){
+            if(data[i].currencies[0].code==="USD")
+            {
+                console.log("name:",data[i].name,"==>",data[i].currencies[0].code)
+            }
+        }
 
 
 //dtail of country name capital and flag detail using foreach
